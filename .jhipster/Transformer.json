@@ -1,0 +1,45 @@
+{
+    "name": "Transformer",
+    "fields": [
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "context",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "decoder",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mapper",
+            "otherEntityRelationshipName": "transformer",
+            "relationshipName": "mapper"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "trazability",
+            "otherEntityRelationshipName": "transformer",
+            "relationshipName": "trazability",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200606",
+    "entityTableName": "transformer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
