@@ -1,0 +1,46 @@
+{
+    "name": "Party",
+    "fields": [
+        {
+            "fieldName": "system",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lookup",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "urlPattern",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "timeout",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "party",
+            "relationshipName": "service"
+        }
+    ],
+    "changelogDate": "20190912200602",
+    "entityTableName": "party",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

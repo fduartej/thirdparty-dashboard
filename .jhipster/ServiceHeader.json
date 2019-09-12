@@ -1,0 +1,31 @@
+{
+    "name": "ServiceHeader",
+    "fields": [
+        {
+            "fieldName": "header",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "serviceHeader",
+            "relationshipName": "service",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200604",
+    "entityTableName": "service_header",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

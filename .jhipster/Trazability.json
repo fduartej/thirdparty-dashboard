@@ -1,0 +1,48 @@
+{
+    "name": "Trazability",
+    "fields": [
+        {
+            "fieldName": "commonFields",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "connectionTypeTo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "detailed",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "transformer",
+            "otherEntityRelationshipName": "trazability",
+            "relationshipName": "transformer"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "trazability",
+            "relationshipName": "serviceFrom",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "service",
+            "otherEntityRelationshipName": "trazability",
+            "relationshipName": "serviceTo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200605",
+    "entityTableName": "trazability",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

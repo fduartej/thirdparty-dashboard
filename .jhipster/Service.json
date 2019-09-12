@@ -1,0 +1,61 @@
+{
+    "name": "Service",
+    "fields": [
+        {
+            "fieldName": "action",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ignoreCertificate",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "storePath",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "storePassword",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "trazability",
+            "otherEntityRelationshipName": "serviceFrom",
+            "relationshipName": "trazability"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "trazability",
+            "otherEntityRelationshipName": "serviceTo",
+            "relationshipName": "trazability"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "serviceHeader",
+            "otherEntityRelationshipName": "service",
+            "relationshipName": "serviceHeader"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "party",
+            "otherEntityRelationshipName": "service",
+            "relationshipName": "party",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200603",
+    "entityTableName": "service",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

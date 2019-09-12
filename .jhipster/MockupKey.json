@@ -1,0 +1,39 @@
+{
+    "name": "MockupKey",
+    "fields": [
+        {
+            "fieldName": "context",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "keyExpression",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "evaluator",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mockup",
+            "otherEntityRelationshipName": "mockupKey",
+            "relationshipName": "mockup",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200601",
+    "entityTableName": "mockup_key",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

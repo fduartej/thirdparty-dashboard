@@ -1,0 +1,31 @@
+{
+    "name": "MockupDetail",
+    "fields": [
+        {
+            "fieldName": "keyValue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "keyResponse",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mockup",
+            "otherEntityRelationshipName": "mockupDetail",
+            "relationshipName": "mockup",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190912200600",
+    "entityTableName": "mockup_detail",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

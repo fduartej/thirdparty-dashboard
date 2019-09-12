@@ -1,0 +1,92 @@
+entity Metadata {
+    description String
+    context String
+    query String
+}
+
+entity Mockup {
+    description String
+    context String
+    headers String
+}
+
+entity MockupDetail {
+    keyValue String
+    keyResponse String    
+}
+
+entity MockupKey {
+    context String
+    name String    
+    keyExpression String    
+    evaluator String      
+}
+
+entity Party {
+	system String
+    url String
+    description String
+    lookup Boolean
+    urlPattern String
+    timeout Long
+}
+
+entity Service {
+	action String
+    description String
+    ignoreCertificate Boolean
+    storePath String
+    storePassword String
+}
+
+entity ServiceHeader {
+	header String
+    value String
+}
+
+entity Trazability {
+	commonFields String
+	connectionTypeTo String
+    detailed Boolean
+}
+
+entity Transformer {
+	type String
+	context String
+    decoder String
+    description String
+}
+
+entity Message {
+	description String
+}
+
+entity Mapper {
+	type String
+    context String
+    name String
+    autoMessage Boolean
+}
+
+relationship OneToMany {
+	Party to Service{party},
+    Service to Trazability{serviceFrom},
+    Service to Trazability{serviceTo},
+    Trazability to Transformer{trazability},
+    Transformer to Mapper{transformer},
+    Service to ServiceHeader{service},
+    Mockup to MockupDetail{mockup},
+    Mockup to MockupKey{mockup}
+}
+
+relationship ManyToMany {
+	Message{mapper} to Mapper{message}
+}
+
+paginate Party with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
